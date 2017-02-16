@@ -1,0 +1,133 @@
+/*Base Styles*/
+body{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.col{
+	text-align: center;
+}
+
+.col h2{
+	text-align: center;
+}
+
+.primary {
+	text-align: center;
+}
+
+.col img {
+	padding: 0 50px;
+}
+
+a.button {
+  display: inline-block;
+  margin: 20px 0;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 3px;
+  transition: all 300ms;
+  background: #3acec2;
+}
+
+.button:hover{
+  box-shadow: 0px 0px 0px 2px white, 0px 0px 0px 4px #3acec2;
+}
+
+/*Estilos de contacto*/
+form {
+	max-width: 450px;
+	margin: 0 auto 50px;
+	padding: 20px;
+}
+
+form h2{
+	text-align: center;
+}
+
+form input, textarea{
+	border: 3px solid #3acec2;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+input[type="submit"]{
+  display: inline-block;
+  margin: 20px 0;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 3px;
+  transition: all 300ms;
+  background: #3acec2;
+}
+
+input[type="submit"]:hover {
+	box-shadow: 0px 0px 0px 2px white, 0px 0px 0px 4px #3acec2;
+}
+
+textarea{
+	height: 10em;
+}
+
+form input:focus, textarea:focus {
+	outline: none;
+	border-color: #3acec2;
+}
+
+form label {
+	display: block;
+	margin-bottom: 20px;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+
+	.main-header, .main-nav, .row{
+		display: flex;
+	}
+
+	.main-header{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.col{
+		flex: 1 50%;
+		text-align: left;
+	}
+
+	.row{
+		flex-wrap: wrap;
+	}
+
+	.secondary{
+		order: -1;
+	}
+}
+
+@media (min-width: 1025px) {
+
+	.main-header{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.col{
+		flex-basis: 0;
+		text-align: left;
+	}
+
+	.primary {
+		flex-grow: 1.4;
+	}
+
+}
